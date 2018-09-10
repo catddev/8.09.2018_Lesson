@@ -189,7 +189,7 @@ int main()
 	str_change(arr);
 	str_change2(arr);
 
-	cout << any_symbol(arr, '&') << endl;
+	cout << any_symbol(arr) << endl;
 	cout << symbol(arr) << endl;
 
 	cout << arr << endl;

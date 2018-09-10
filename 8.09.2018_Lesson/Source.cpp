@@ -26,19 +26,26 @@ void check_string(char* str) {
 	cout << "Alpha: " << a << endl;
 	cout << "Others: " << o << endl;
 }
+// Подсчитать количество слов во введенном предложении.
+// а) *между словами находится только один пробел
+// б) ** пробелы также могут располагаться в начале и в конце предложения
+// в) *** пробелы могут располагаться в начале и в конце предложения, и между словами может быть болееодного пробела
+
+// а), б)
 int spaces(char* str) {
 	int k = 0;
 	for (int i = 0; i < strlen(str); i++)
 	{
 		if (str[i] == ' ')
 		{
-			if (i == 0 || i == (strlen(str) - 1)) continue;
+			if (i == 0 || i == (strlen(str) - 1)) continue; // б)
 			// if(str[i]==str[i-1]) continue;
 			k++;
 		}
 	}
 	return k + 1;
 }
+// в)
 int lot_of_spaces(char* str) {
 	int k = 0;
 	for (int i = 0; i < strlen(str); i++)
